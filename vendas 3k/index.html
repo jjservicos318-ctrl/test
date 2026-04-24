@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método Cortes Virais Pro — R$500 a R$1500 por semana no TikTok</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #060608;
+    --deep: #0d0d14;
+    --card: #12121c;
+    --border: #1e1e2e;
+    --purple: #7c3aed;
+    --purple-bright: #9d5cf6;
+    --purple-glow: #a855f7;
+    --neon: #c084fc;
+    --neon-light: #e9d5ff;
+    --gold: #f59e0b;
+    --gold-light: #fcd34d;
+    --green: #10b981;
+    --text: #f1f0f5;
+    --muted: #9ca3af;
+    --subtle: #6b7280;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.3;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+  .heading { font-family: 'Syne', sans-serif; font-weight: 800; }
+
+  /* ── UTILITIES ── */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  .text-center { text-align: center; }
+  .text-purple { color: var(--purple-bright); }
+  .text-neon { color: var(--neon); }
+  .text-gold { color: var(--gold-light); }
+  .text-green { color: var(--green); }
+
+  /* ── GLOW EFFECTS ── */
+  .glow-purple { text-shadow: 0 0 40px rgba(168, 85, 247, 0.5), 0 0 80px rgba(168, 85, 247, 0.2); }
+  .glow-gold { text-shadow: 0 0 30px rgba(245, 158, 11, 0.6); }
+
+  /* ── GRADIENT BACKGROUNDS ── */
+  .bg-gradient-hero {
+    background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(124, 58, 237, 0.3) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 60%),
+                var(--black);
+  }
+
+  /* ── ANIMATED GRADIENT BORDER ── */
+  @keyframes borderSpin {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* ── CTA BUTTON ── */
+  .btn-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, #7c3aed, #a855f7, #7c3aed);
+    background-size: 200% 200%;
+    animation: borderSpin 3s ease infinite;
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 48px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.4), 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  .btn-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .btn-cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 50px rgba(168, 85, 247, 0.7), 0 8px 30px rgba(0,0,0,0.5);
+  }
+
+  .btn-cta:hover::before { opacity: 1; }
+  .btn-cta:active { transform: scale(0.98); }
+
+  .btn-pulse {
+    animation: borderSpin 3s ease infinite, pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.4), 0 4px 20px rgba(0,0,0,0.4); }
+    50% { box-shadow: 0 0 60px rgba(168, 85, 247, 0.8), 0 4px 30px rgba(0,0,0,0.5); }
+  }
+
+  /* ── SECTION SPACING ── */
+  section { padding: 80px 0; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    display: inline-block;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--purple-bright);
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  /* ╔══════════════════════════════╗
+     ║         ANNOUNCEMENT BAR     ║
+     ╚══════════════════════════════╝ */
+  .announcement-bar {
+    background: linear-gradient(90deg, var(--purple), #9333ea, var(--purple));
+    background-size: 200%;
+    animation: borderSpin 4s ease infinite;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .announcement-bar span { opacity: 0.8; }
+
+  /* ╔══════════════════════════════╗
+     ║            HERO              ║
+     ╚══════════════════════════════╝ */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; left: 50%;
+    transform: translateX(-50%);
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  #hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.4), transparent);
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    padding: 8px 18px;
+    border-radius: 100px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 0.05em;
+    margin-bottom: 28px;
+  }
+
+  .hero-badge::before { content: '●'; font-size: 0.5rem; animation: blink 1.5s ease infinite; }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero-headline {
+    font-size: clamp(3rem, 10vw, 7rem);
+    line-height: 0.92;
+    margin-bottom: 12px;
+  }
+
+  .hero-headline em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--neon), var(--purple-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: var(--muted);
+    margin-bottom: 12px;
+    font-weight: 300;
+  }
+
+  .hero-accent {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--gold-light);
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+  .hero-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.82rem;
+    color: var(--subtle);
+  }
+
+  .hero-trust-dot { color: var(--green); }
+
+  .hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+
+  .hero-stat {}
+
+  .hero-stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1;
+    background: linear-gradient(135deg, var(--neon), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-stat-label {
+    font-size: 0.78rem;
+    color: var(--subtle);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+  }
+
+  /* ── FLOATING TIKTOK CARD ── */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tiktok-card {
+    width: 220px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 60px rgba(124, 58, 237, 0.2), 0 20px 60px rgba(0,0,0,0.6);
+    animation: float 4s ease-in-out infinite;
+    position: relative;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(-1deg); }
+    50% { transform: translateY(-12px) rotate(1deg); }
+  }
+
+  .tiktok-screen {
+    height: 340px;
+    background: linear-gradient(180deg, #1a0533 0%, #0d0d14 60%, #000 100%);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+  }
+
+  .tiktok-screen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 30% 30%, rgba(168, 85, 247, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(99, 102, 241, 0.2) 0%, transparent 50%);
+  }
+
+  .play-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px; height: 56px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  .tiktok-info {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .tiktok-user { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; }
+  .tiktok-caption { font-size: 0.6rem; color: rgba(255,255,255,0.7); line-height: 1.4; }
+
+  .tiktok-actions {
+    position: absolute;
+    right: 12px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .tiktok-action { text-align: center; }
+  .tiktok-action-icon { font-size: 1.4rem; display: block; }
+  .tiktok-action-count { font-size: 0.55rem; color: rgba(255,255,255,0.8); }
+
+  .tiktok-bar {
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .tiktok-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.05em; }
+  .tiktok-logo span { color: #fe2c55; }
+
+  /* Earnings badge */
+  .earnings-badge {
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    background: linear-gradient(135deg, #065f46, #10b981);
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+    animation: float2 3s ease-in-out infinite;
+    min-width: 130px;
+  }
+
+  @keyframes float2 {
+    0%, 100% { transform: translateY(0px) rotate(2deg); }
+    50% { transform: translateY(-8px) rotate(-1deg); }
+  }
+
+  .earnings-label { font-size: 0.6rem; color: rgba(255,255,255,0.7); font-family: 'Syne', sans-serif; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+  .earnings-amount { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.02em; line-height: 1.1; }
+  .earnings-week { font-size: 0.6rem; color: rgba(255,255,255,0.6); }
+
+  /* View badge */
+  .views-badge {
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    animation: float3 3.5s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+
+  @keyframes float3 {
+    0%, 100% { transform: translateY(0px) rotate(-2deg); }
+    50% { transform: translateY(-6px) rotate(1deg); }
+  }
+
+  .views-label { font-size: 0.55rem; color: var(--subtle); font-family: 'Syne', sans-serif; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+  .views-count { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--neon); }
+
+  /* ╔══════════════════════════════╗
+     ║         SOCIAL PROOF         ║
+     ╚══════════════════════════════╝ */
+  #prova {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #prova::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 400px;
+    background: radial-gradient(ellipse, rgba(124, 58, 237, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .earnings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+
+  .earnings-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .earnings-card:hover {
+    border-color: rgba(124, 58, 237, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .earnings-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--green), transparent);
+  }
+
+  .ec-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .ec-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ec-name { font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 700; }
+  .ec-platform { font-size: 0.65rem; color: var(--subtle); }
+
+  .ec-amount {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .ec-period { font-size: 0.7rem; color: var(--subtle); font-family: 'Syne', sans-serif; letter-spacing: 0.06em; }
+
+  .ec-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.6rem;
+    color: var(--green);
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 50px;
+  }
+
+  .testimonial-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    transition: border-color 0.3s;
+  }
+
+  .testimonial-card:hover { border-color: rgba(124, 58, 237, 0.3); }
+
+  .tc-stars { color: var(--gold-light); font-size: 0.8rem; margin-bottom: 12px; }
+  .tc-text { font-size: 0.85rem; color: rgba(241, 240, 245, 0.85); line-height: 1.6; margin-bottom: 16px; }
+
+  .tc-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tc-avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .tc-name { font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 700; }
+  .tc-city { font-size: 0.65rem; color: var(--subtle); }
+
+  /* Social numbers bar */
+  .numbers-bar {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 40px;
+    background: rgba(124, 58, 237, 0.06);
+    border: 1px solid rgba(124, 58, 237, 0.15);
+    border-radius: 16px;
+    flex-wrap: wrap;
+  }
+
+  .nb-item { text-align: center; }
+  .nb-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    background: linear-gradient(135deg, var(--neon), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+  .nb-label { font-size: 0.75rem; color: var(--subtle); font-family: 'Syne', sans-serif; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 4px; }
+
+  /* ╔══════════════════════════════╗
+     ║         HOW IT WORKS         ║
+     ╚══════════════════════════════╝ */
+  #como-funciona { background: var(--black); }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .steps-container::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 50px;
+    bottom: 50px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--purple), var(--neon), var(--purple));
+  }
+
+  .step-item {
+    display: flex;
+    gap: 28px;
+    padding: 32px 0;
+    position: relative;
+  }
+
+  .step-number {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--purple), var(--purple-bright));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+  }
+
+  .step-content {}
+  .step-title { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; }
+  .step-desc { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+  .step-tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.65rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--neon);
+    background: rgba(192, 132, 252, 0.1);
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    padding: 4px 12px;
+    border-radius: 100px;
+  }
+
+  /* ╔══════════════════════════════╗
+     ║           BENEFITS           ║
+     ╚══════════════════════════════╝ */
+  #beneficios {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .benefit-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 24px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .benefit-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .benefit-card:hover { border-color: rgba(124, 58, 237, 0.4); transform: translateY(-3px); }
+  .benefit-card:hover::before { opacity: 1; }
+
+  .benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .benefit-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--neon-light);
+  }
+
+  .benefit-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+
+  /* ╔══════════════════════════════╗
+     ║            OFFER             ║
+     ╚══════════════════════════════╝ */
+  #oferta {
+    background: var(--black);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #oferta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .offer-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 20px;
+    padding: 48px 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 80px rgba(124, 58, 237, 0.15);
+  }
+
+  .offer-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple), var(--neon), var(--purple));
+    background-size: 200%;
+    animation: borderSpin 3s ease infinite;
+  }
+
+  .offer-best-value {
+    display: inline-block;
+    background: var(--gold);
+    color: #000;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+
+  .offer-product-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #fff, var(--neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .offer-tagline {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .offer-includes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .offer-include-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.88rem;
+  }
+
+  .offer-check {
+    width: 20px; height: 20px;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    color: var(--green);
+    flex-shrink: 0;
+  }
+
+  .offer-pricing {
+    margin-bottom: 28px;
+    padding: 24px;
+    background: rgba(124, 58, 237, 0.06);
+    border: 1px solid rgba(124, 58, 237, 0.15);
+    border-radius: 12px;
+  }
+
+  .offer-old-price {
+    font-size: 0.9rem;
+    color: var(--subtle);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+
+  .offer-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    line-height: 1;
+    color: var(--text);
+  }
+
+  .offer-price span {
+    font-size: 40%;
+    vertical-align: top;
+    margin-top: 10px;
+    display: inline-block;
+    color: var(--muted);
+  }
+
+  .offer-price-note {
+    font-size: 0.75rem;
+    color: var(--green);
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  .btn-cta-full {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+  }
+
+  .offer-guarantee {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.15);
+    border-radius: 10px;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .offer-guarantee-icon { font-size: 1.4rem; }
+
+  /* ╔══════════════════════════════╗
+     ║           URGENCY            ║
+     ╚══════════════════════════════╝ */
+  #urgencia {
+    background: linear-gradient(135deg, #1a0a00, #0d0d14, #0a0a1a);
+    border-top: 1px solid rgba(245, 158, 11, 0.2);
+    border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+  }
+
+  .urgency-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .urgency-fire {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    animation: shake 0.5s ease-in-out infinite;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+
+  .urgency-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 6vw, 4rem);
+    color: var(--gold-light);
+    margin-bottom: 12px;
+  }
+
+  .urgency-desc {
+    font-size: 0.95rem;
+    color: var(--muted);
+    max-width: 500px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+  }
+
+  .countdown-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .countdown-box {
+    background: var(--card);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 10px;
+    padding: 16px 20px;
+    min-width: 70px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.08);
+  }
+
+  .countdown-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+
+  .countdown-label {
+    font-size: 0.55rem;
+    color: var(--subtle);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .spots-bar {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 4px;
+    max-width: 400px;
+    margin: 0 auto 12px;
+  }
+
+  .spots-fill {
+    height: 8px;
+    background: linear-gradient(90deg, var(--purple), var(--neon));
+    border-radius: 100px;
+    width: 78%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spots-fill::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s ease infinite;
+  }
+
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
+  }
+
+  .spots-label { font-size: 0.75rem; color: var(--muted); margin-top: 8px; }
+  .spots-label strong { color: var(--neon); }
+
+  /* ╔══════════════════════════════╗
+     ║          GUARANTEE           ║
+     ╚══════════════════════════════╝ */
+  #garantia {
+    background: var(--deep);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .guarantee-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guarantee-badge-big {
+    width: 100px; height: 100px;
+    background: linear-gradient(135deg, #064e3b, #10b981);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 24px;
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+  }
+
+  .guarantee-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 16px;
+  }
+
+  .guarantee-text {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 480px;
+  }
+
+  /* ╔══════════════════════════════╗
+     ║           FINAL CTA          ║
+     ╚══════════════════════════════╝ */
+  #cta-final {
+    background: var(--black);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #cta-final::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px; height: 600px;
+    background: radial-gradient(ellipse, rgba(124, 58, 237, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-final-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-final-title {
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    margin-bottom: 20px;
+  }
+
+  .cta-final-sub {
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 500px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  .cta-payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  .pay-icon {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 0.7rem;
+    color: var(--muted);
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  /* ╔══════════════════════════════╗
+     ║            FOOTER            ║
+     ╚══════════════════════════════╝ */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--neon), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .footer-text { font-size: 0.7rem; color: var(--subtle); line-height: 1.8; max-width: 500px; margin: 0 auto; }
+
+  /* ── STICKY BAR ── */
+  .sticky-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(13, 13, 20, 0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(124, 58, 237, 0.3);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .sticky-bar.visible { transform: translateY(0); }
+
+  .sticky-bar-text { font-size: 0.8rem; color: var(--muted); }
+  .sticky-bar-text strong { color: var(--text); font-family: 'Syne', sans-serif; font-weight: 700; }
+
+  .btn-sticky {
+    background: linear-gradient(135deg, var(--purple), var(--purple-bright));
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+  }
+
+  /* ── DIVIDERS ── */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 0;
+  }
+
+  /* ── FADE IN ANIMATIONS ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    section { padding: 60px 0; }
+
+    .hero-content { text-align: center; }
+    .hero-cta-wrap { align-items: center; }
+    .hero-stats { justify-content: center; gap: 24px; }
+    .hero-visual { display: none; }
+
+    .earnings-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .numbers-bar { gap: 30px; }
+
+    .steps-container { padding-left: 0; }
+    .steps-container::before { display: none; }
+
+    .benefits-grid { grid-template-columns: 1fr; }
+
+    .offer-card { padding: 32px 24px; }
+
+    .hero-grid { display: block; }
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-visual { display: flex; margin-top: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  🔥 OFERTA ESPECIAL — Acesso Vitalício por apenas <strong>R$19,90</strong> &nbsp;·&nbsp; <span>Vagas se encerrando em breve</span>
+</div>
+
+<!-- ═══════════════════════════════
+       HERO
+═══════════════════════════════ -->
+<section id="hero" class="bg-gradient-hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">Método 100% Comprovado</div>
+
+        <h1 class="hero-headline display">
+          Descubra como ganhar de <em>R$500</em> a <em>R$1500</em><br>por semana
+        </h1>
+
+        <p class="hero-sub">Com cortes virais no TikTok</p>
+        <p class="hero-accent">✦ Mesmo começando do zero e sem aparecer</p>
+
+        <div class="hero-cta-wrap">
+          <a href="#oferta" class="btn-cta btn-pulse">
+            ⚡ QUERO COMEÇAR AGORA
+          </a>
+          <div class="hero-trust">
+            <span class="hero-trust-dot">●</span> Acesso imediato
+            &nbsp;·&nbsp;
+            <span class="hero-trust-dot">●</span> 7 dias de garantia
+            &nbsp;·&nbsp;
+            <span class="hero-trust-dot">●</span> Sem mensalidade
+          </div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">+2.000</div>
+            <div class="hero-stat-label">Alunos ativos</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">R$1.500</div>
+            <div class="hero-stat-label">Potencial semanal</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">7 dias</div>
+            <div class="hero-stat-label">Garantia total</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Floating TikTok Card -->
+        <div style="position:relative;">
+          <div class="tiktok-card">
+            <div class="tiktok-screen">
+              <div class="play-icon">▶</div>
+              <div class="tiktok-actions">
+                <div class="tiktok-action">
+                  <span class="tiktok-action-icon">❤️</span>
+                  <span class="tiktok-action-count">248k</span>
+                </div>
+                <div class="tiktok-action">
+                  <span class="tiktok-action-icon">💬</span>
+                  <span class="tiktok-action-count">3.2k</span>
+                </div>
+                <div class="tiktok-action">
+                  <span class="tiktok-action-icon">↗️</span>
+                  <span class="tiktok-action-count">18k</span>
+                </div>
+              </div>
+              <div class="tiktok-info">
+                <div class="tiktok-user">@cortesvirais.pro</div>
+                <div class="tiktok-caption">Aprenda a ganhar dinheiro editando vídeos ✂️💰 #cortes #tiktok</div>
+              </div>
+            </div>
+            <div class="tiktok-bar">
+              <span class="tiktok-logo">Tik<span>Tok</span></span>
+            </div>
+          </div>
+
+          <!-- Earnings Badge -->
+          <div class="earnings-badge">
+            <div class="earnings-label">Esta semana</div>
+            <div class="earnings-amount">R$1.240</div>
+            <div class="earnings-week">💰 Saldo recebido</div>
+          </div>
+
+          <!-- Views Badge -->
+          <div class="views-badge">
+            <div class="views-label">Visualizações</div>
+            <div class="views-count">2.4M</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+       PROVA SOCIAL
+═══════════════════════════════ -->
+<section id="prova">
+  <div class="container">
+    <div class="text-center fade-in" style="margin-bottom:50px;">
+      <div class="section-label">Resultados reais</div>
+      <h2 class="heading" style="font-size:clamp(1.8rem,4vw,2.8rem);">Alunos que já estão <span class="text-neon">lucrando</span></h2>
+    </div>
+
+    <!-- Earnings Cards -->
+    <div class="earnings-grid fade-in">
+      <div class="earnings-card">
+        <div class="ec-header">
+          <div class="ec-avatar" style="background:linear-gradient(135deg,#7c3aed,#a855f7);">👤</div>
+          <div>
+            <div class="ec-name">Lucas M.</div>
+            <div class="ec-platform">TikTok · São Paulo, SP</div>
+          </div>
+        </div>
+        <div class="ec-amount">R$1.380</div>
+        <div class="ec-period">Ganhos na última semana</div>
+        <div class="ec-verified">✓ Verificado via Hotmart</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="ec-header">
+          <div class="ec-avatar" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">👤</div>
+          <div>
+            <div class="ec-name">Ana Paula R.</div>
+            <div class="ec-platform">TikTok · Belo Horizonte, MG</div>
+          </div>
+        </div>
+        <div class="ec-amount">R$920</div>
+        <div class="ec-period">Ganhos na última semana</div>
+        <div class="ec-verified">✓ Verificado via Kiwify</div>
+      </div>
+
+      <div class="earnings-card">
+        <div class="ec-header">
+          <div class="ec-avatar" style="background:linear-gradient(135deg,#059669,#10b981);">👤</div>
+          <div>
+            <div class="ec-name">Gabriel T.</div>
+            <div class="ec-platform">TikTok · Fortaleza, CE</div>
+          </div>
+        </div>
+        <div class="ec-amount">R$1.150</div>
+        <div class="ec-period">Ganhos na última semana</div>
+        <div class="ec-verified">✓ Verificado via Eduzz</div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonials-grid fade-in">
+      <div class="testimonial-card">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"Nunca imaginei que em 2 semanas já estaria recebendo meus primeiros R$600. O método é simples demais, fiquei com receio no começo mas valeu cada centavo."</p>
+        <div class="tc-author">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#7c3aed,#c084fc);">😊</div>
+          <div>
+            <div class="tc-name">Fernanda C.</div>
+            <div class="tc-city">Campinas, SP · Aluna há 3 semanas</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"Já tentei vários cursos de renda online e nenhum funcionou assim. Fiz tudo pelo celular, sem mostrar o rosto. Na terceira semana bati R$1.100."</p>
+        <div class="tc-author">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#0ea5e9,#38bdf8);">😄</div>
+          <div>
+            <div class="tc-name">Rodrigo L.</div>
+            <div class="tc-city">Recife, PE · Aluno há 1 mês</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="tc-stars">★★★★★</div>
+        <p class="tc-text">"Sou donas de casa e não entendia nada de edição. O passo a passo é tão claro que qualquer pessoa consegue. Já paguei as contas do mês só com isso."</p>
+        <div class="tc-author">
+          <div class="tc-avatar" style="background:linear-gradient(135deg,#db2777,#f472b6);">🌸</div>
+          <div>
+            <div class="tc-name">Mariana B.</div>
+            <div class="tc-city">Porto Alegre, RS · Aluna há 6 semanas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Numbers Bar -->
+    <div class="numbers-bar fade-in">
+      <div class="nb-item">
+        <div class="nb-number">+2.000</div>
+        <div class="nb-label">Alunos Ativos</div>
+      </div>
+      <div class="nb-item">
+        <div class="nb-number">R$1.500</div>
+        <div class="nb-label">Máximo semanal</div>
+      </div>
+      <div class="nb-item">
+        <div class="nb-number">98%</div>
+        <div class="nb-label">Satisfação</div>
+      </div>
+      <div class="nb-item">
+        <div class="nb-number">7 dias</div>
+        <div class="nb-label">Garantia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+       COMO FUNCIONA
+═══════════════════════════════ -->
+<section id="como-funciona">
+  <div class="container">
+    <div class="text-center fade-in" style="margin-bottom:60px;">
+      <div class="section-label">O Método</div>
+      <h2 class="heading" style="font-size:clamp(1.8rem,4vw,2.8rem);">Como funciona em <span class="text-neon">3 passos simples</span></h2>
+      <p style="color:var(--muted);max-width:480px;margin:16px auto 0;font-size:0.9rem;">Sem experiência, sem equipamentos caros. Só o seu celular e 1-2 horas por dia.</p>
+    </div>
+
+    <div class="steps-container fade-in">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3 class="step-title">Encontre vídeos virais para editar</h3>
+          <p class="step-desc">Você aprende a identificar os conteúdos que já têm potencial viral — podcasts, entrevistas, lives e clipes que estão bombando. Não precisa criar nada do zero.</p>
+          <span class="step-tag">⚡ Leva menos de 15 minutos por dia</span>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3 class="step-title">Edite cortes simples no celular</h3>
+          <p class="step-desc">Usando apps gratuitos que já estão no seu celular, você aprende a fazer edições rápidas que engajam. Sem precisar aprender edição profissional ou comprar software.</p>
+          <span class="step-tag">📱 100% pelo celular</span>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3 class="step-title">Poste, monetize e lucre semanalmente</h3>
+          <p class="step-desc">Com a estratégia certa de publicação, seus vídeos ganham visualizações e você começa a monetizar via afiliados, patrocínios ou Creator Fund — direto para sua conta.</p>
+          <span class="step-tag">💰 Resultados em até 7 dias</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+       BENEFÍCIOS
+═══════════════════════════════ -->
+<section id="beneficios">
+  <div class="container">
+    <div class="text-center fade-in" style="margin-bottom:50px;">
+      <div class="section-label">Vantagens Exclusivas</div>
+      <h2 class="heading" style="font-size:clamp(1.8rem,4vw,2.8rem);">Por que esse método <span class="text-neon">funciona pra você</span></h2>
+    </div>
+
+    <div class="benefits-grid fade-in">
+      <div class="benefit-card">
+        <span class="benefit-icon">🕶️</span>
+        <h3 class="benefit-title">Sem precisar aparecer</h3>
+        <p class="benefit-desc">Nenhum dos nossos alunos mostra o rosto. Você trabalha nos bastidores, edita e publica — 100% anônimo se quiser.</p>
+      </div>
+
+      <div class="benefit-card">
+        <span class="benefit-icon">📱</span>
+        <h3 class="benefit-title">Pode fazer pelo celular</h3>
+        <p class="benefit-desc">Não precisa de computador, câmera profissional nem estúdio. Um celular mediano já é suficiente para começar hoje mesmo.</p>
+      </div>
+
+      <div class="benefit-card">
+        <span class="benefit-icon">⚡</span>
+        <h3 class="benefit-title">Método simples e rápido</h3>
+        <p class="benefit-desc">1 a 2 horas por dia são suficientes. Funciona mesmo que você nunca tenha feito um vídeo na vida.</p>
+      </div>
+
+      <div class="benefit-card">
+        <span class="benefit-icon">💸</span>
+        <h3 class="benefit-title">Renda toda semana</h3>
+        <p class="benefit-desc">Ao contrário de cursos, aqui você aprende a gerar renda recorrente — não uma venda única. O dinheiro pode chegar toda semana.</p>
+      </div>
+
+      <div class="benefit-card">
+        <span class="benefit-icon">🔄</span>
+        <h3 class="benefit-title">Escala sem limite</h3>
+        <p class="benefit-desc">Pode criar múltiplas contas e nichos. Quanto mais você aplica o método, mais fontes de renda você tem ao mesmo tempo.</p>
+      </div>
+
+      <div class="benefit-card">
+        <span class="benefit-icon">🎓</span>
+        <h3 class="benefit-title">Suporte completo</h3>
+        <p class="benefit-desc">Acesso ao grupo VIP com alunos ativos, atualizações do método e suporte direto para tirar dúvidas quando precisar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+       URGÊNCIA
+═══════════════════════════════ -->
+<section id="urgencia">
+  <div class="container">
+    <div class="urgency-wrapper fade-in">
+      <div class="urgency-fire">🔥</div>
+      <h2 class="urgency-title display">Oferta expirando em breve</h2>
+      <p class="urgency-desc">Esse preço é especial de lançamento. Quando as vagas esgotarem, o valor volta ao normal. Não deixe para depois.</p>
+
+      <div class="countdown-wrap" id="countdown">
+        <div class="countdown-box">
+          <div class="countdown-num" id="cd-hours">02</div>
+          <div class="countdown-label">Horas</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cd-mins">47</div>
+          <div class="countdown-label">Min</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cd-secs">00</div>
+          <div class="countdown-label">Seg</div>
+        </div>
+      </div>
+
+      <div class="spots-bar">
+        <div class="spots-fill"></div>
+      </div>
+      <p class="spots-label"><strong>78 vagas preenchidas</strong> — restam apenas <strong>22</strong> nesse preço</p>
+
+      <a href="#oferta" class="btn-cta" style="margin-top:28px;">
+        🔒 GARANTIR MINHA VAGA AGORA
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+       OFERTA
+═══════════════════════════════ -->
+<section id="oferta">
+  <div class="container">
+    <div class="text-center fade-in" style="margin-bottom:50px;">
+      <div class="section-label">Acesso Completo</div>
+      <h2 class="heading" style="font-size:clamp(1.8rem,4vw,2.8rem);">Tudo que você precisa para <span class="text-neon">começar hoje</span></h2>
+    </div>
+
+    <div class="offer-card fade-in">
+      <div class="offer-best-value">⚡ Melhor Custo-Benefício</div>
+
+      <h3 class="offer-product-name display">Método Cortes<br>Virais Pro</h3>
+
+      <p class="offer-tagline">O único método que te ensina a lucrar com cortes no TikTok sem aparecer e do zero.</p>
+
+      <div class="offer-includes">
+        <div class="offer-include-item">
+          <div class="offer-check">✓</div>
+          <span>Módulo completo de curadoria de conteúdo viral</span>
+        </div>
+        <div class="offer-include-item">
+          <div class="offer-check">✓</div>
+          <span>Passo a passo de edição pelo celular (apps gratuitos)</span>
+        </div>
+        <div class="offer-include-item">
+          <div class="offer-check">✓</div>
+          <span>Estratégia de postagem para maximizar alcance</span>
+        </div>
+        <div class="offer-include-item">
+          <div class="offer-check">✓</div>
+          <span>Guia de monetização via afiliados e Creator Fund</span>
+        </div>
+        <div class="offer-include-item">
+          <div class="offer-check">✓</div>
+          <span>Acesso ao grupo VIP de alunos e suporte</span>
+        </div>
+        <div class="offer-include-item">
+          <div class="offer-check">✓</div>
+          <span>Atualizações vitalícias do método</span>
+        </div>
+        <div class="offer-include-item">
+          <div class="offer-check">✓</div>
+          <span><strong>BÔNUS:</strong> Pack com 50 templates de cortes prontos</span>
+        </div>
+      </div>
+
+      <div class="offer-pricing">
+        <div class="offer-old-price">De R$97,00 por apenas</div>
+        <div class="offer-price"><span>R$</span>19<span style="font-size:60%;vertical-align:baseline;">,90</span></div>
+        <div class="offer-price-note">🔒 Pagamento único · Acesso vitalício imediato</div>
+      </div>
+
+      <!-- Checkout button — troque o href pelo link real do Hotmart/Kiwify -->
+      <a href="#" class="btn-cta btn-cta-full btn-pulse">
+        ⚡ QUERO ACESSO IMEDIATO — R$19,90
+      </a>
+
+      <div class="offer-guarantee">
+        <span class="offer-guarantee-icon">🛡️</span>
+        <span><strong>Garantia incondicional de 7 dias.</strong> Se não gostar por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas.</span>
+      </div>
+
+      <div class="cta-payment-icons" style="margin-top:20px;">
+        <div class="pay-icon">💳 Cartão</div>
+        <div class="pay-icon">📱 PIX</div>
+        <div class="pay-icon">🏦 Boleto</div>
+        <div class="pay-icon">🔒 SSL Seguro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+       GARANTIA
+═══════════════════════════════ -->
+<section id="garantia">
+  <div class="container">
+    <div class="guarantee-wrapper fade-in">
+      <div class="guarantee-badge-big">🛡️</div>
+      <h2 class="guarantee-title display">
+        <span class="text-green">Garantia</span> Total<br>de 7 Dias
+      </h2>
+      <p class="guarantee-text">
+        Eu confio tanto nesse método que ofereço garantia incondicional. Se dentro de 7 dias você sentir que o método não é para você, basta mandar uma mensagem e devolvemos <strong>100% do seu investimento</strong> — sem burocracia, sem perguntas, sem enrolação. O risco é zero. O único risco é ficar de fora.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════
+       CTA FINAL
+═══════════════════════════════ -->
+<section id="cta-final">
+  <div class="container">
+    <div class="cta-final-inner fade-in">
+      <p class="section-label">Última chamada</p>
+      <h2 class="cta-final-title display">
+        Pare de esperar.<br>
+        <em class="text-neon">Comece hoje.</em>
+      </h2>
+      <p class="cta-final-sub">
+        Mais de 2.000 pessoas já mudaram sua renda com esse método. A diferença entre elas e você é uma decisão. Você tem tudo que precisa para começar agora.
+      </p>
+
+      <a href="#" class="btn-cta btn-pulse" style="font-size:1.1rem;padding:22px 56px;">
+        ⚡ SIM, QUERO COMEÇAR AGORA — R$19,90
+      </a>
+
+      <div class="cta-payment-icons">
+        <div class="pay-icon">💳 Cartão de Crédito</div>
+        <div class="pay-icon">📱 PIX Instantâneo</div>
+        <div class="pay-icon">🏦 Boleto Bancário</div>
+      </div>
+
+      <p style="margin-top:20px;font-size:0.75rem;color:var(--subtle);">
+        🛡️ Compra 100% segura · Acesso imediato após pagamento · Suporte via WhatsApp
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Cortes Virais Pro</div>
+  <p class="footer-text">
+    Este produto é vendido com total transparência. Os resultados apresentados são de alunos reais, porém individuais e não garantidos — dependem do esforço e dedicação de cada pessoa. Este site não é afiliado ao TikTok Inc. Todos os direitos reservados © 2025.
+    <br><br>
+    <a href="#" style="color:var(--subtle);text-decoration:none;">Política de Privacidade</a> &nbsp;·&nbsp;
+    <a href="#" style="color:var(--subtle);text-decoration:none;">Termos de Uso</a> &nbsp;·&nbsp;
+    <a href="#" style="color:var(--subtle);text-decoration:none;">Suporte</a>
+  </p>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-text">
+    <strong>Método Cortes Virais Pro</strong><br>
+    <span>🔥 Oferta por tempo limitado — R$19,90</span>
+  </div>
+  <a href="#oferta" class="btn-sticky">GARANTIR AGORA ↑</a>
+</div>
+
+<script>
+  // ── COUNTDOWN TIMER ──
+  const endTime = new Date().getTime() + (2 * 60 + 47) * 60 * 1000;
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const diff = endTime - now;
+
+    if (diff <= 0) {
+      document.getElementById('cd-hours').textContent = '00';
+      document.getElementById('cd-mins').textContent = '00';
+      document.getElementById('cd-secs').textContent = '00';
+      return;
+    }
+
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+    document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // ── FADE IN ON SCROLL ──
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  faders.forEach(el => observer.observe(el));
+
+  // ── STICKY BAR ──
+  const heroEl = document.getElementById('hero');
+  const stickyBar = document.getElementById('stickyBar');
+
+  window.addEventListener('scroll', () => {
+    const heroBottom = heroEl.getBoundingClientRect().bottom;
+    if (heroBottom < 0) {
+      stickyBar.classList.add('visible');
+    } else {
+      stickyBar.classList.remove('visible');
+    }
+  });
+</script>
+
+</body>
+</html>
